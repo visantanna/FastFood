@@ -48,3 +48,6 @@ que por sua vez, pode ser dividido em dois fluxos:
 
 
 Para visualização mais fácil e completa: [EventStorming](https://miro.com/welcomeonboard/UElJdjNsbXhCU2JKTjFKeFFYaXFPQ1cwT2w1d3hnUGRFd0hHUEx2ZGRhOHplMFhlaWZIZVY5Z1EzRE1wY3NXZnwzNDU4NzY0NTk1Mzg2MjM0MzIwfDI=?share_link_id=552096779953)
+
+
+#TODO ver a melhor forma para armazenar as senhas no docker compose
