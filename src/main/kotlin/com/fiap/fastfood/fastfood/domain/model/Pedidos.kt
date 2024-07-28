@@ -1,12 +1,10 @@
 package com.fiap.fastfood.fastfood.domain.model
 
-class Pedidos(
-    val categoria: Categoria,
-    val nome :String,
-    val preco: Double,
-    val descricao : String,
-    val imagens: List<Array<Byte>>
-) {
+import org.apache.catalina.User
 
+class Pedidos(
+    user: User,
+    items :List<Item>
+) {
 
 }
