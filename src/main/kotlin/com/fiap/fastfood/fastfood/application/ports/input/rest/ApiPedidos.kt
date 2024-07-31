@@ -1,4 +1,4 @@
-package com.fiap.fastfood.fastfood.domain.ports.input
+package com.fiap.fastfood.fastfood.application.ports.input.rest
 
 interface ApiPedidos {
     fun finalizacaoPedido(userCpf:String, idItems: List<String> )

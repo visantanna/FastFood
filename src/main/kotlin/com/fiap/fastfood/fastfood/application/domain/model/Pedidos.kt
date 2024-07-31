@@ -1,4 +1,4 @@
-package com.fiap.fastfood.fastfood.domain.model
+package com.fiap.fastfood.fastfood.application.domain.model
 
 import org.apache.catalina.User
 

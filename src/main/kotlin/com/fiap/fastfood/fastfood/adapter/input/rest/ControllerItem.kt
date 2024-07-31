@@ -1,7 +1,7 @@
 package com.fiap.fastfood.fastfood.adapter.input.rest
 
-import com.fiap.fastfood.fastfood.domain.model.Item
-import com.fiap.fastfood.fastfood.domain.ports.input.ApiItem
+import com.fiap.fastfood.fastfood.application.domain.model.Item
+import com.fiap.fastfood.fastfood.application.ports.input.rest.ApiItem
 import org.springframework.web.bind.annotation.*
 
 @RestController
