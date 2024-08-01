@@ -11,13 +11,13 @@ class ClientPersistenceAdapter(
 ) : ClientePortRepository{
 
 
-    override fun save(cliente: Cliente) {
+    override fun save(cliente: Cliente):Cliente {
         val clienteEntity = cliente.toEntity()
-        clienteRepository.save(clienteEntity)
+        return clienteRepository.save(clienteEntity).toDomain()
     }
 
     override fun obterCliente(cpf: String): Cliente? {
-        return clienteRepository.findByCpf()?.toDomain();
+        return clienteRepository.findByCpf(cpf)?.toDomain();
     }
 
 }

@@ -1,27 +1,34 @@
 package com.fiap.fastfood.fastfood.adapter.input.rest
 
+import com.fiap.fastfood.fastfood.adapter.input.rest.response.ClienteResponse
+import com.fiap.fastfood.fastfood.adapter.input.rest.response.toResponse
 import com.fiap.fastfood.fastfood.application.domain.model.Cliente
 import com.fiap.fastfood.fastfood.application.ports.CriarClienteUseCase
 import com.fiap.fastfood.fastfood.application.ports.ObterClienteUseCase
 import com.fiap.fastfood.fastfood.application.ports.input.rest.ApiCliente
 import org.springframework.http.HttpStatus
+import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
-import java.net.http.HttpResponse
 
 @RestController
 @RequestMapping("/v1/clientes")
 class ControllerCliente(
     val criarClienteUseCase: CriarClienteUseCase,
-    val ObterClienteUseCase: ObterClienteUseCase
+    val obterClienteUseCase: ObterClienteUseCase
 ) : ApiCliente {
     @PostMapping
-    override fun cadastroCliente(@RequestBody cliente: Cliente) {
-        criarClienteUseCase.execute(cliente)
+    override fun cadastroCliente(@RequestBody cliente: Cliente): ResponseEntity<ClienteResponse> {
+        return ResponseEntity.ok(criarClienteUseCase.execute(cliente).toResponse());
     }
 
-    @GetMapping("/{id}")
-    override fun obterCliente(@PathVariable cpf: String) {
-        ObterClienteUseCase.execute(cpf)?.toResponse() ?: HttpResponse(body="Cliente não encontrado",status= HttpStatus.NOT_FOUND)
+    @GetMapping("/{cpf}")
+    override fun obterCliente(@PathVariable cpf: String): ResponseEntity<ClienteResponse> {
+        val cliente = obterClienteUseCase.execute(cpf)
+        if(cliente != null)
+            return ResponseEntity.ok(cliente.toResponse())
+        else
+            return ResponseEntity<ClienteResponse>(HttpStatus.NOT_FOUND)
+
     }
 
 }
