@@ -1,9 +1,9 @@
-package com.fiap.fastfood.fastfood.application.domain.usecases
+package com.fiap.fastfood.fastfood.application.domain.usecases.cliente
 
 import com.fiap.fastfood.fastfood.adapter.output.repository.ClientPersistenceAdapter
 import com.fiap.fastfood.fastfood.application.domain.exception.BussinessLogicException
 import com.fiap.fastfood.fastfood.application.domain.model.Cliente
-import com.fiap.fastfood.fastfood.application.ports.CriarClienteUseCase
+import com.fiap.fastfood.fastfood.application.ports.cliente.CriarClienteUseCase
 import org.springframework.stereotype.Service
 
 @Service

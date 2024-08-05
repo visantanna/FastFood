@@ -6,6 +6,3 @@ class Item(
     val preco: Double,
     val descricao : String,
     val imagens: List<Array<Byte>>)
-{
-
-}

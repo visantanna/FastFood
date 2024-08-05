@@ -1,4 +1,4 @@
-package com.fiap.fastfood.fastfood.application.ports
+package com.fiap.fastfood.fastfood.application.ports.cliente
 
 import com.fiap.fastfood.fastfood.application.domain.model.Cliente
 
