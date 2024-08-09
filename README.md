@@ -3,7 +3,6 @@ Repositório de entrega de Trabalho da Fiap Curso de Arquitetura de Software
 
 # Dicionário linguagem Ubíqua
 
-
 | termo               | significado          |
 |---------------------|----------------------|
 | pedido              | conjunto de até 4 items que formam a compra de um cliente, esse pedido pode ser formado por até um lanche, um acompanhamento, uma bebida e uma sobremesa |
@@ -50,4 +49,8 @@ que por sua vez, pode ser dividido em dois fluxos:
 Para visualização mais fácil e completa: [EventStorming](https://miro.com/welcomeonboard/UElJdjNsbXhCU2JKTjFKeFFYaXFPQ1cwT2w1d3hnUGRFd0hHUEx2ZGRhOHplMFhlaWZIZVY5Z1EzRE1wY3NXZnwzNDU4NzY0NTk1Mzg2MjM0MzIwfDI=?share_link_id=552096779953)
 
 
-#TODO ver a melhor forma para armazenar as senhas no docker compose
+# TODO ver a melhor forma para armazenar as senhas no docker compose
+# TODO colocar a aplicação dentro do docker, ajustar variaveis
+# TODO Tentar ajustar o swagger
+# TODO Ajustar Documentação com passos-a-passos e breve explicação de cada endpoint
+# TODO Desenho do agregado
