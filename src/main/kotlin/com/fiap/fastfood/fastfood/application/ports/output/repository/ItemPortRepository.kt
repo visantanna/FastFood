@@ -9,4 +9,5 @@ interface ItemPortRepository {
     fun delete(id: String)
     fun alter(id: String , item:Item): Item
     fun exists(id: String): Boolean
+    fun getById(id: String): Item
 }

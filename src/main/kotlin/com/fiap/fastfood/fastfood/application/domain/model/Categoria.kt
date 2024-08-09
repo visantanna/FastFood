@@ -1,5 +1,5 @@
 package com.fiap.fastfood.fastfood.application.domain.model
 
-enum class Categoria(status: String) {
-    RECEBIDO("Recebido"),EM_PREPARACAO("Em preparação"), PRONTO("Pronto"), FINALIZADO("Finalizado"),
+enum class Categoria(val value:String) {
+    LANCHE("Lanche"),ACOMPANHAMENTO("Acompanhamento"), SOBREMESA("Sobremesa"), BEBIDA("Bebida"),
 }

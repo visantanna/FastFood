@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository
 @Repository
 interface ClientRepository: MongoRepository<ClienteEntity, String> {
     fun findByCpf(cpf:String): ClienteEntity?
+    fun existsByCpf(cpf:String): Boolean
 }

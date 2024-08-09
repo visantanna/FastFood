@@ -16,8 +16,20 @@ class ClientPersistenceAdapter(
         return clienteRepository.save(clienteEntity).toDomain()
     }
 
-    override fun obterCliente(cpf: String): Cliente? {
+    override fun obterClientePorCpf(cpf: String): Cliente? {
         return clienteRepository.findByCpf(cpf)?.toDomain();
+    }
+
+    override fun exist(id: String): Boolean {
+        return clienteRepository.existsById(id)
+    }
+
+    override fun existPorCpf(cpf: String): Boolean {
+        return clienteRepository.existsByCpf(cpf)
+    }
+
+    override fun obterClientePorId(id: String): Cliente {
+        return clienteRepository.findById(id).get().toDomain()
     }
 
 }

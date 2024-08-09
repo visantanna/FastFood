@@ -21,7 +21,8 @@ class ItemPersistenceAdapter(
     }
 
     override fun delete(id: String) {
-        itemRepository.delete(this.get(id))
+        val item = itemRepository.findById(id).get()
+        itemRepository.delete(item)
     }
 
     override fun alter(id:String, item: Item): Item {
@@ -34,9 +35,11 @@ class ItemPersistenceAdapter(
         return itemRepository.existsById(id);
     }
 
-    private fun get(id: String): ItemEntity{
-        return itemRepository.findById(id).get()
+    override fun getById(id: String): Item {
+        return itemRepository.findById(id).get().toDomain()
     }
+
+
 
 
 }
