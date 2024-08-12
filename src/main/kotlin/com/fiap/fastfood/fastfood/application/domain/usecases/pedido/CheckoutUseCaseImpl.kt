@@ -2,6 +2,7 @@ package com.fiap.fastfood.fastfood.application.domain.usecases.pedido
 
 import com.fiap.fastfood.fastfood.adapter.input.rest.request.PedidoRequest
 import com.fiap.fastfood.fastfood.application.domain.model.Pedido
+import com.fiap.fastfood.fastfood.application.domain.model.PedidoStatus
 import com.fiap.fastfood.fastfood.application.domain.usecases.cliente.ObterClienteByIdUseCaseImpl
 import com.fiap.fastfood.fastfood.application.domain.validation.PedidoValidador
 import com.fiap.fastfood.fastfood.application.ports.service.pedido.CheckoutUseCase
@@ -24,7 +25,8 @@ class CheckoutUseCaseImpl(
             pedidoRequest.lanche?.let { obterItemUseCase.execute(it) },
             pedidoRequest.acompanhamento?.let { obterItemUseCase.execute(it) },
             pedidoRequest.bebida?.let { obterItemUseCase.execute(it) },
-            pedidoRequest.sobremesa?.let { obterItemUseCase.execute(it) }
+            pedidoRequest.sobremesa?.let { obterItemUseCase.execute(it) },
+            status = PedidoStatus.RECEBIDO
         )
         return pedidoPort.savePedido(pedido)
     }

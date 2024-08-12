@@ -40,7 +40,8 @@ fun Pedido.toResponse(): PedidoResponse =
             lanche = lanche?.toResponse(),
             acompanhamento = acompanhamento?.toResponse(),
             bebida = bebida?.toResponse(),
-            sobremesa = sobremesa?.toResponse()
+            sobremesa = sobremesa?.toResponse(),
+            status =  status.name
         )
     }
 

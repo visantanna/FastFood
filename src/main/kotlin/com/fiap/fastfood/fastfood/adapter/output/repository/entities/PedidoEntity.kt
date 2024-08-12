@@ -17,5 +17,6 @@ data class PedidoEntity (
     @DBRef
     val bebida: ItemEntity?,
     @DBRef
-    val sobremesa: ItemEntity?
+    val sobremesa: ItemEntity?,
+    val status : String
 )

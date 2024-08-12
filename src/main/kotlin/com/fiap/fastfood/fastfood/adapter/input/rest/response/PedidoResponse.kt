@@ -1,6 +1,7 @@
 package com.fiap.fastfood.fastfood.adapter.input.rest.response
 
 import com.fiap.fastfood.fastfood.application.domain.model.Cliente
+import com.fiap.fastfood.fastfood.application.domain.model.PedidoStatus
 
 data class PedidoResponse(
     val id: String,
@@ -8,5 +9,6 @@ data class PedidoResponse(
     val lanche: ItemResponse?,
     val acompanhamento: ItemResponse?,
     val bebida: ItemResponse?,
-    val sobremesa: ItemResponse?
+    val sobremesa: ItemResponse?,
+    val status: String
 )

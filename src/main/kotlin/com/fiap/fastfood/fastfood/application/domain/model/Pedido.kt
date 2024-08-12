@@ -8,5 +8,6 @@ data class Pedido(
     val lanche: Item?,
     val acompanhamento: Item?,
     val bebida: Item?,
-    val sobremesa: Item?
+    val sobremesa: Item?,
+    val status: PedidoStatus = PedidoStatus.RECEBIDO
 )

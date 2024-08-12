@@ -73,7 +73,8 @@ fun Pedido.toEntity():PedidoEntity =
             lanche = lanche?.toEntity(),
             acompanhamento = acompanhamento?.toEntity(),
             bebida = bebida?.toEntity(),
-            sobremesa = sobremesa?.toEntity()
+            sobremesa = sobremesa?.toEntity(),
+            status = status.name
         )
     }
 
