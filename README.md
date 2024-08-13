@@ -1,9 +1,9 @@
 # Informações da entrega
-Grupo: Grupo 49
-Integrantes: Vinícius Teixeira Sant' Anna (Infelizmente não consegui entrar em contato com nenhum outro membro, nem por discord , nem e-mail nem mesmo linkedIn)
-email: vinitsantanna@gmail.com
-Discord: visantanna#0176 -> visantanna - #rm357722
-RM: rm357722
+- Grupo: Grupo 49
+- Integrantes: Vinícius Teixeira Sant' Anna (Infelizmente não consegui entrar em contato com nenhum outro membro, nem por discord , nem e-mail nem mesmo linkedIn)
+- email: vinitsantanna@gmail.com
+- Discord: visantanna#0176 -> visantanna - #rm357722
+- RM: rm357722
 
 acesso a toda documentação e aplicação a partir do link: https://github.com/visantanna/FastFood/tree/main
 <b>Toda a documentação e parte da entrega está no README.md do Repositório!!</b>
